@@ -19,11 +19,24 @@
 
   <div class="ui page grid">
 
-    <div class="column">
+    <div class="ten wide column">
+        <div class="ui action fluid input">
+          <div class="ui teal button" id="getWeather">Use My Location</div>
+        </div>
+    </div>
 
-      <article class="ui card">
+    <div class="ten wide column">
+        <div class="ui action fluid input">
+          <input type="text" id="getWeather" placeholder="enter zipcode">
+          <div class="ui teal button">Get Weather</div>
+        </div>
+    </div>
+
+    <div class="column ten wide">
+
+      <article class="ui card"> 
   
-        <h1 class="header">p5-weather</h1>
+        <h1 class="header city">p5-weather</h1>
 
         <div id="weather">
             <ul>
