@@ -1,3 +1,28 @@
 .button {
 	text-align: center;
 }
+
+ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+div.basic.modal div {
+
+}
+
+:before, :after {
+box-sizing: none;
+}
+
+div.ui.page.grid {
+width: auto;
+padding: auto;
+margin: auto;
+}
+
+.ui.modal {
+ 
+ left: 25%;
+
+}

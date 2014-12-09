@@ -1,5 +1,8 @@
 var cheney = '99004'
 var spokane = '99204'
+$('.ui.card, .newlocation').hide();
+
+$('.basic').modal('show');
 
 
 
@@ -50,6 +53,17 @@ $('.button.getweather').on('click', function() {
     location: zipcode,
   
     success: function(weather) {
+
+      //hide button
+      $('.basic.modal').hide();
+
+      //show weather and "new location" button
+      $('.ui.card, .newlocation').show();
+
+      $('.newlocation').show();
+
+
+
       
       // Get & store temperature
       var temp = weather.temp;
@@ -74,5 +88,21 @@ $('.button.getweather').on('click', function() {
   $('#getWeather').val('');
   
 });
+
+
+//click on "new location"
+$('.newlocation').click(function(){
+
+//show lightbox to select new location
+  $('.basic.modal').modal('show');
+});
+
+//hide lightbox when location selected
+$('.button.getweather').click(function() {
+  $('.basic').modal('hide');
+});
+
+console.log()
+
 
 
