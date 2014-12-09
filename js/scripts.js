@@ -28,9 +28,19 @@ var spokane = '99204'
   // REF: http://foundation.zurb.com/docs/
 // REF: http://simpleweatherjs.com/
 
-// On click button, get zip, then run Simple Weather
-$('.button').on('click', function() {
+//If input is empty, the button will be disabled
+$('input').keyup(function(){
+  if ( $('input').val().length >= 1   ) {
+  // if less than 1 character
+    $('.button.getweather').removeClass('disabled')}
+
+    else {$('.button.getweather').addClass('disabled')}
   
+});
+
+// On click button, get zip, then run Simple Weather
+$('.button.getweather').on('click', function() {
+
   // 1. Get & store entered zipcode
   var zipcode = $('#getWeather').val();
   
@@ -65,5 +75,4 @@ $('.button').on('click', function() {
   
 });
 
-//When "enter zipcode is selected "
 
