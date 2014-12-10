@@ -12,20 +12,6 @@ $('.basic').modal('show');
     woeid: '',
     unit: 'f',
     success: function(weather) {
-    //change background dependng on weather
-      if(weather.high < 45) {
-        $('body').addClass('rain');
-      } 
-        else {
-        $('body').addClass('fair');
-      };
-
-      if(weather.high > 45) {
-        $('body').addClass('rain');
-      } 
-        else {
-        $('body').addClass('fair');
-      };
 
 
      // html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
@@ -87,11 +73,47 @@ $('.button.getweather').on('click', function() {
 
       // Get & store city
       var city = weather.city;
+
+      var currently = weather.currently;
       
       // Output to hooks in HTML
       $('.high').text(high);
       $('.low').text(low);
       $('.city').text(city);
+      $('.currently').text(weather.currently);
+
+      //change background dependng on weather
+      if(weather.high > 45) {
+        $('body').addClass('rain');
+      };
+
+      if(weather.high > 45) {
+        $('body').addClass('fair');
+      };
+
+      if(weather.high > 45) {
+        $('body').addClass('partly');
+      };
+
+      if(weather.high > 45) {
+        $('body').addClass('cloudy');
+      };
+
+      if(weather.high > 45) {
+        $('body').addClass('fog');
+      };
+
+      if(weather.high < 45) {
+        $('body').addClass('snow');
+      } else {
+        $('body').addClass('fair');
+
+      };
+
+
+
+      console.log(weather.high > 45);
+
 
       // See console for all properties of object
       console.log(weather);
@@ -121,7 +143,9 @@ $('.button.getweather').click(function() {
   $('.basic').modal('hide');
 });
 
-  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+$('.retry').click(function() {  
+    getWeather(); //Get the initial weather.
+});
 
 
 
