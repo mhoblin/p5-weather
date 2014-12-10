@@ -1,3 +1,8 @@
+body {
+	color: white;
+	background: grey;
+}
+
 .button {
 	text-align: center;
 }
@@ -23,6 +28,14 @@ margin: auto;
 
 .ui.modal {
  
- left: 25%;
+ left: 20%;
 
+}
+
+.rain {
+	background: url("../img/rainy.jpg") center top no-repeat #292929;
+}
+
+.fair {
+	background: url("../img/sunny.jpg") center top no-repeat #292929;
 }

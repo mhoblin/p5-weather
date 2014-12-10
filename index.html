@@ -28,7 +28,7 @@
 
       <div class="ui page center aligned grid">
           <div class="ui big input attached sixteen wide column">
-              <input type="text" id="getWeather" placeholder="enter zipcode"/>
+              <input type="text" id="getWeather" placeholder="enter zip/location"/>
               <div class="ui teal bottom attached big button getweather disabled">Get Weather</div>
           </div>
       </div>
@@ -38,15 +38,22 @@
 
   <div class="ui page grid center aligned">
     <div class="ui page center aligned grid">
-          <article class="ui card center aligned ten wide column"> 
+          <article class="ui .stuff center aligned ten wide column"> 
     
             <h1 class="header city">p5-weather</h1>
 
               <div id="weather">
-                <ul>
-                  <li class="temp">00</li>
-                  <li class="current"></li>
-                </ul>
+
+                  <div><h3>High</h3>
+                    <p class="high">00</p>
+                  </div>
+
+                  <div>
+                    <h3>Low</h3>
+                    <p class="low">00</p>
+                  </div>
+
+                  <p class="current"></p>
               </div>
 
           </article>

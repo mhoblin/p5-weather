@@ -1,6 +1,6 @@
 var cheney = '99004'
 var spokane = '99204'
-$('.ui.card, .newlocation').hide();
+$('.ui.stuff, .newlocation').hide();
 
 $('.basic').modal('show');
 
@@ -12,13 +12,31 @@ $('.basic').modal('show');
     woeid: '',
     unit: 'f',
     success: function(weather) {
+    //change background dependng on weather
+      if(weather.high < 45) {
+        $('body').addClass('rain');
+      } 
+        else {
+        $('body').addClass('fair');
+      };
+
+      if(weather.high > 45) {
+        $('body').addClass('rain');
+      } 
+        else {
+        $('body').addClass('fair');
+      };
+
+
      // html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
      // html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
      // html += '<li class="currently">'+weather.currently+'</li>';
      // html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
-  		$('.temp').text(weather.temp);
+  		$('.high').text(weather.high);
+      $('.low').text(weather.low);
   		$('.header').text(weather.city);
   		$('.current').text(weather.currently)
+      $
 
   		console.log(weather)	
 
@@ -58,7 +76,7 @@ $('.button.getweather').on('click', function() {
       $('.basic.modal').hide();
 
       //show weather and "new location" button
-      $('.ui.card, .newlocation').show();
+      $('.ui.stuff, .newlocation').show();
 
       $('.newlocation').show();
 
@@ -66,12 +84,15 @@ $('.button.getweather').on('click', function() {
 
       
       // Get & store temperature
-      var temp = weather.temp;
+      var high = weather.high;
+      var low = weather.low;
+
       // Get & store city
       var city = weather.city;
       
       // Output to hooks in HTML
-      $('.temp').text(temp);
+      $('.high').text(high);
+      $('.low').text(low);
       $('.city').text(city);
 
       // See console for all properties of object
@@ -102,7 +123,7 @@ $('.button.getweather').click(function() {
   $('.basic').modal('hide');
 });
 
-console.log()
+  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
 
 
 
