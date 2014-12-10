@@ -145,8 +145,6 @@ $('.button.getweather').click(function() {
   $('.basic').modal('hide');
 });
 
-$('.retry').click(function() {  
-    getWeather(); //Get the initial weather.
-});
+
 
 
