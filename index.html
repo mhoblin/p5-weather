@@ -19,17 +19,17 @@
 
   <div class="ui page grid basic modal">
 
-    <div>
-      <div class="ui page center aligned grid">
-        <div class="sixteen wide column">
+   <div>
+      <!-- <div class="ui page center aligned grid">
+        <div class="sixteen wide column js-geolocation">
               <div class="ui teal big fluid button">Use My Location</div>
         </div>
-      </div>
+      </div> -->
 
       <div class="ui page center aligned grid">
-          <div class="ui big input attached sixteen wide column">
+          <div class="ui big input center aligned attached sixteen wide column">
               <input type="text" id="getWeather" placeholder="enter zip/location"/>
-              <div class="ui teal bottom attached big button getweather disabled">Get Weather</div>
+              <div class="ui teal center aligned bottom attached big button getweather disabled">Get Weather</div>
           </div>
       </div>
     </div>
@@ -38,22 +38,25 @@
 
   <div class="ui page grid center aligned">
     <div class="ui page center aligned grid">
-          <article class="ui .stuff center aligned ten wide column"> 
+          <article class="ui stuff center aligned eight wide column"> 
     
             <h1 class="header city">p5-weather</h1>
 
-              <div id="weather">
+              <div id="weather" class="ui page grid">
 
-                  <div><h3>High</h3>
+                  <div class="left floated right aligned eight wide column"><h3>High</h3>
                     <p class="high">00</p>
                   </div>
 
-                  <div>
+                  <div class="right floated left aligned eight wide column">
                     <h3>Low</h3>
                     <p class="low">00</p>
                   </div>
 
-                  <p class="current"></p>
+                  <div class="sixteen wide center aligned column">
+                    <p class="currently"></p>
+                  </div>
+
               </div>
 
           </article>

@@ -1,20 +1,31 @@
-body {
+body{
 	color: white;
 	background: grey;
+	width: 100%;
+	text-align: center;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.ui.grid {
+	text-align: center;
 }
 
 .button {
 	text-align: center;
 }
 
-ul {
-	list-style-type: none;
-	text-align: left;
+
+h1 {
+	font-size: 4em
 }
 
-div.basic.modal div {
-
+h3, p {
+	font-size: 2em;
 }
+
+
+
+
 
 :before, :after {
 box-sizing: none;
@@ -28,14 +39,51 @@ margin: auto;
 
 .ui.modal {
  
- left: 20%;
+ text-align: center;
 
 }
 
 .rain {
-	background: url("../img/rainy.jpg") center top no-repeat #292929;
+	background: url("../img/rainy.jpg") center center no-repeat fixed #292929;
 }
 
 .fair {
-	background: url("../img/sunny.jpg") center top no-repeat #292929;
+	background: url("../img/sunny.jpg") center center no-repeat fixed #292929;
 }
+
+.snow {
+	background: url("../img/snow.jpg") center center no-repeat fixed #292929;
+}
+
+.cloudy {
+	background: url("../img/cloudy.jpg") center center no-repeat fixed #292929;
+}
+
+.partly {
+	background: url("../img/partly.jpg") center center no-repeat fixed #292929;
+
+}
+
+.fog {
+	background: url("../img/fog.jpg") center center no-repeat fixed #292929;
+
+}
+
+.partly,
+.cloudy,
+.snow,
+.fair,
+.rain {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+

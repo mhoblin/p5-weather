@@ -35,10 +35,8 @@ $('.basic').modal('show');
   		$('.high').text(weather.high);
       $('.low').text(weather.low);
   		$('.header').text(weather.city);
-  		$('.current').text(weather.currently)
-      $
+  		$('.currently').text(weather.currently)
 
-  		console.log(weather)	
 
     },
     error: function(error) {
