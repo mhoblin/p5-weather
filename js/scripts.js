@@ -83,36 +83,38 @@ $('.button.getweather').on('click', function() {
       $('.currently').text(weather.currently);
 
       //change background dependng on weather
-      if(weather.high > 45) {
+      if(weather.currently = 'Rain, Light Rain, Showers') {
         $('body').addClass('rain');
       };
 
-      if(weather.high > 45) {
+
+      if(weather.currently = 'Fair') {
         $('body').addClass('fair');
       };
 
-      if(weather.high > 45) {
+      if(weather.currently = 'Partly Cloudy') {
         $('body').addClass('partly');
       };
 
-      if(weather.high > 45) {
+      if(weather.currently = 'Cloudy') {
         $('body').addClass('cloudy');
       };
 
-      if(weather.high > 45) {
+      if(weather.currently = 'Fog') {
         $('body').addClass('fog');
       };
 
-      if(weather.high < 45) {
+      if(weather.currently = 'Snow') {
         $('body').addClass('snow');
       } else {
         $('body').addClass('fair');
-
       };
 
+      console.log(currently)
 
 
-      console.log(weather.high > 45);
+
+
 
 
       // See console for all properties of object
@@ -146,6 +148,5 @@ $('.button.getweather').click(function() {
 $('.retry').click(function() {  
     getWeather(); //Get the initial weather.
 });
-
 
 
