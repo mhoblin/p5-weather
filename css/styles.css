@@ -73,11 +73,66 @@ margin: auto;
 
 }
 
+.storm {
+	background: url("../img/storm.jpg") center center no-repeat fixed #292929;
+
+}
+
+.lightning {
+	background: url("../img/lightning.jpg") center center no-repeat fixed #292929;
+
+}
+
+.tornado {
+	background: url("../img/tornado.jpg") center center no-repeat fixed #292929;
+
+}
+
+.freezing {
+	background: url("../img/freezing.jpg") center center no-repeat fixed #292929;
+}
+
+.mix {
+	background: url("../img/mix.jpg") center center no-repeat fixed #292929;
+}
+
+.dust {
+	background: url("../img/dust.jpg") center center no-repeat fixed #292929;
+}
+
+.smoky {
+	background: url("../img/smoky.jpg") center center no-repeat fixed #292929;
+}
+
+.windy {
+	background: url("../img/windy.jpg") center center no-repeat fixed #292929;
+}
+
+.cold {
+	background: url("../img/cold.jpg") center center no-repeat fixed #292929;
+}
+
+.hot {
+	background: url("../img/hot.jpg") center center no-repeat fixed #292929;
+}
+
 .partly,
 .cloudy,
 .snow,
 .fair,
-.rain {
+.rain,
+.tornado,
+.storm,
+.lightning,
+.fog,
+.freezing,
+.mix,
+.dust,
+.windy,
+.cold,
+.smoky,
+.hot
+ {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

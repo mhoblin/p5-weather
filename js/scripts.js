@@ -83,32 +83,75 @@ $('.button.getweather').on('click', function() {
       $('.currently').text(weather.currently);
 
       //change background dependng on weather
-      if(weather.currently = 'Rain, Light Rain, Showers') {
-        $('body').addClass('rain');
+      if(weather.currently == 'Light Rain' || weather.currently == 'Rain' || weather.currently == 'Light Rain Shower' || weather.currently == 'Scattered Showers' || weather.currently == 'Drizzle') {
+        $('body').removeClass().addClass('rain dimmable');
+      };
+
+      if(weather.currently == 'Freezing Drizzle' || weather.currently == 'Freezing Rain') {
+        $('body').removeClass().addClass('freezing dimmable');
       };
 
 
-      if(weather.currently = 'Fair') {
-        $('body').addClass('fair');
+      if(weather.currently == 'Clear' || weather.currently == 'Fair' || weather.currently == 'Sunny') {
+        $('body').removeClass().addClass('fair dimmable');
       };
 
-      if(weather.currently = 'Partly Cloudy') {
-        $('body').addClass('partly');
+      if(weather.currently == 'Partly Cloudy') {
+        $('body').removeClass().addClass('partly dimmable');
       };
 
-      if(weather.currently = 'Cloudy') {
-        $('body').addClass('cloudy');
+      if(weather.currently == 'Cloudy' || weather.currently == 'Mostly Cloudy') {
+        $('body').removeClass().addClass('cloudy dimmable');
       };
 
-      if(weather.currently = 'Fog') {
-        $('body').addClass('fog');
+
+      if(weather.currently == 'Fog' || weather.currently == 'Foggy' || weather.currently == '') {
+        $('body').removeClass().addClass('fog dimmable');
       };
 
-      if(weather.currently = 'Snow') {
-        $('body').addClass('snow');
-      } else {
-        $('body').addClass('fair');
+      if(weather.currently == 'Blowing Snow' || weather.currently == 'Light Snow Showers' || weather.currently == 'Snow Flurries' || weather.currently == 'Snow' || weather.currently == 'Light Snow' || weather.currently == 'Heavy Snow' || weather.currently == 'Scattered Snow Showers' || weather.currently == 'Snow Showers') {
+        $('body').removeClass().addClass('snow dimmable');
       };
+
+      if(weather.currently == 'Tropical Storm' || weather.currently == 'Hurricane' || weather.currently == 'Storm') {
+        $('body').removeClass().addClass('storm dimmable');
+      };
+
+      if(weather.currently == 'Isolated Thundershowers' || weather.currently == 'Scattered Thunderstorms' || weather.currently == 'Isolated Thunderstorms' || weather.currently == 'Thunderstorms' || weather.currently == 'Thundershowers' || weather.currently == 'Severe Thunderstorms') {
+        $('body').removeClass().addClass('lightning dimmable');
+      };
+
+      if(weather.currently == 'Tornado') {
+        $('body').removeClass().addClass('tornado dimmable');
+      };
+
+      if(weather.currently == 'Mixed Rain and Hail' || weather.currently == 'Sleet' || weather.currently == 'Hail' || weather.currently == 'Mixed Snow and Sleet' || weather.currently == 'Mixed Raind and Sleet' || weather.currently == 'Mixed Rain and Snow') {
+        $('body').removeClass().addClass('mix dimmable');
+      };
+
+      if(weather.currently == 'Dust') {
+        $('body').removeClass().addClass('dust dimmable');
+      };
+
+      if(weather.currently == 'Smoky') {
+        $('body').removeClass().addClass('smoky dimmable');
+      };
+
+      if(weather.currently == 'Cold') {
+        $('body').removeClass().addClass('cold dimmable');
+      };
+
+       if(weather.currently == 'Hot') {
+        $('body').removeClass().addClass('hot dimmable');
+      };
+
+      if(weather.currently == 'Blustery' || weather.currently == 'Windy') {
+        $('body').removeClass().addClass('windy dimmable');
+      };
+
+
+
+  
 
       console.log(currently)
 
