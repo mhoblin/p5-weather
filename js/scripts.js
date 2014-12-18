@@ -137,7 +137,7 @@ $('.button.getweather').on('click', function() {
         $('body').removeClass().addClass('smoky dimmable');
       };
 
-      if(weather.currently == 'Cold') {
+      if(weather.currently == 'Wintry Mix' ||weather.currently == 'Cold') {
         $('body').removeClass().addClass('cold dimmable');
       };
 
